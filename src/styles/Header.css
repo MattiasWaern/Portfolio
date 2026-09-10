@@ -1,3 +1,4 @@
-h1{
-    font-size: 20rem;
+.header h1{
+    font-size: 2rem;
+    color: red;
 }
