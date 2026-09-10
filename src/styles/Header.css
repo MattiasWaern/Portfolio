@@ -1,4 +1,28 @@
-.header h1{
+header{
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+
+header ul{
+    display: flex;
     font-size: 2rem;
+    list-style: none;
+}
+
+
+.navbar a{
+    display: flex;
+    text-decoration:dashed;
     color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navbar a:hover{
+    transform: translateY(-20px);
 }

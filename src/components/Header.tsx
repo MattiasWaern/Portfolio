@@ -1,9 +1,11 @@
 import "../styles/Header.css";
 import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
+
 
 function Header() {
   return (
-    <header className="header">
+    <header>
 
      <div className="navbar">
       <ul>
@@ -11,12 +13,10 @@ function Header() {
         <li> <Link to="/Projects">Projects</Link> </li>
         <li> <Link to="/Contact">Contact</Link> </li>
         <li> <Link to="/About">About</Link> </li>
+        <li> <a href="" target="_blank" rel="noopener noreferrer"><FaGithub /> </a> </li>
       </ul>
      </div>
 
-
-
-      <h1>Header</h1>
     </header>
   );
 }
