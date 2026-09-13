@@ -36,6 +36,19 @@ function FlickeringGrid({
             canvas.style.height = height + "px";
             ctx.setTransform(1, 0, 0, 1, 0, 0);
             ctx.scale(dpr, dpr);
+
+            const cell = squareSize + gridGap;
+            cols = Math.max(1, Math.floor(width / cell));
+            rows = Math.max(1, Math.floor(height / cell));      
+            
+            sqaures = new Float32Array(cols * rows);
+            for(let i = 0; i < square.length; i ++){
+                sqaures[i] = Math.random() * maxOpacity;
+            }
+        }
+
+        function draw(){
+            
         }
     })
 }
