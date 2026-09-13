@@ -9,8 +9,8 @@ function Header() {
         squareSize={4}
         gridGap={6}
         flickerChance={0.3}
-        color="120, 310, 220"
-        maxOpacity={0.3}
+        color="255, 255, 255"
+        maxOpacity={.3}
       />
 
       <div className="navbar">
