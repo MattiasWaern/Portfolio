@@ -1,12 +1,38 @@
 import "../styles/Header.css";
-import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import FlickeringGrid from "../components/FlickeringGrid";
 
 function Header() {
   return (
-    <header className="header">
-      <FaGithub />
+    <header>
+      <FlickeringGrid
+        squareSize={4}
+        gridGap={6}
+        flickerChance={0.3}
+        color="255, 255, 255"
+        maxOpacity={.3}
+      />
 
-      <h1>Header</h1>
+      <div className="navbar">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+
+          <li>
+            <Link to="/Projects">Projects</Link>
+          </li>
+
+          <li>
+            <Link to="/Contact">Contact</Link>
+          </li>
+
+          <li>
+            <Link to="/About">About</Link>
+          </li>
+
+        </ul>
+      </div>
     </header>
   );
 }

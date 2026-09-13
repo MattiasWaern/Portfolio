@@ -1,16 +1,11 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import HomePage  from './pages/Startsida';
+import "../src/index.css"
 
 function App() {
 
   return (
     <>
-
-        <Header/>
-
-          <h1>Hello world</h1>
-
-         <Footer/> 
+      <HomePage/>
     </>
   )
 }
