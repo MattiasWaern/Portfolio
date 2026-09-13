@@ -2,6 +2,8 @@ header {
     position: relative;
     height: fit-content;
     overflow: hidden;
+
+    background-color: black;
 }
 
 header ul {
@@ -21,9 +23,9 @@ header ul {
     align-items: center;
 
     text-decoration: none;
-    color: red;
+    color: white;
 
-    font-size: 2rem;
+    font-size: 6rem;
     font-weight: bold;
 
     padding: 0.5rem 1rem;
@@ -37,5 +39,5 @@ header ul {
 
 .navbar {
     position: relative;
-    z-index: 2;
+    z-index: 4;
 }
