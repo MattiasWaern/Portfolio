@@ -1,0 +1,348 @@
+diff --git a/package-lock.json b/package-lock.json
+index 80a79a9..442a243 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -9,6 +9,7 @@
+       "version": "0.0.0",
+       "dependencies": {
+         "@tailwindcss/vite": "^4.3.3",
++        "clsx": "^2.1.1",
+         "lucide-react": "^1.44.0",
+         "motion": "^13.2.0",
+         "next-themes": "^0.4.6",
+@@ -16,6 +17,7 @@
+         "react-dom": "^19.2.8",
+         "react-icons": "^5.7.0",
+         "react-router-dom": "^7.18.3",
++        "tailwind-merge": "^3.7.0",
+         "tailwindcss": "^4.3.3"
+       },
+       "devDependencies": {
+@@ -1790,6 +1792,15 @@
+       ],
+       "license": "CC-BY-4.0"
+     },
++    "node_modules/clsx": {
++      "version": "2.1.1",
++      "resolved": "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz",
++      "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==",
++      "license": "MIT",
++      "engines": {
++        "node": ">=6"
++      }
++    },
+     "node_modules/convert-source-map": {
+       "version": "2.0.0",
+       "resolved": "https://registry.npmjs.org/convert-source-map/-/convert-source-map-2.0.0.tgz",
+@@ -3133,6 +3144,16 @@
+         "node": ">=0.10.0"
+       }
+     },
++    "node_modules/tailwind-merge": {
++      "version": "3.7.0",
++      "resolved": "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.7.0.tgz",
++      "integrity": "sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==",
++      "license": "MIT",
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/dcastil"
++      }
++    },
+     "node_modules/tailwindcss": {
+       "version": "4.3.3",
+       "resolved": "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.3.tgz",
+diff --git a/package.json b/package.json
+index dd28d58..7a80023 100644
+--- a/package.json
++++ b/package.json
+@@ -11,6 +11,7 @@
+   },
+   "dependencies": {
+     "@tailwindcss/vite": "^4.3.3",
++    "clsx": "^2.1.1",
+     "lucide-react": "^1.44.0",
+     "motion": "^13.2.0",
+     "next-themes": "^0.4.6",
+@@ -18,6 +19,7 @@
+     "react-dom": "^19.2.8",
+     "react-icons": "^5.7.0",
+     "react-router-dom": "^7.18.3",
++    "tailwind-merge": "^3.7.0",
+     "tailwindcss": "^4.3.3"
+   },
+   "devDependencies": {
+diff --git a/src/components/magicui/flickering-grid.tsx b/src/components/magicui/flickering-grid.tsx
+new file mode 100644
+index 0000000..7d3c91d
+--- /dev/null
++++ b/src/components/magicui/flickering-grid.tsx
+@@ -0,0 +1,192 @@
++import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
++
++import { cn } from "@/lib/utils";
++
++interface FlickeringGridProps extends React.HTMLAttributes<HTMLDivElement> {
++  squareSize?: number;
++  gridGap?: number;
++  flickerChance?: number;
++  color?: string;
++  width?: number;
++  height?: number;
++  className?: string;
++  maxOpacity?: number;
++}
++
++export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
++  squareSize = 4,
++  gridGap = 6,
++  flickerChance = 0.3,
++  color = "rgb(0, 0, 0)",
++  width,
++  height,
++  className,
++  maxOpacity = 0.3,
++  ...props
++}) => {
++  const canvasRef = useRef<HTMLCanvasElement>(null);
++  const containerRef = useRef<HTMLDivElement>(null);
++  const [isInView, setIsInView] = useState(false);
++  const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
++
++  const memoizedColor = useMemo(() => {
++    const toRGBA = (color: string) => {
++      if (typeof window === "undefined") {
++        return `rgba(0, 0, 0,`;
++      }
++      const canvas = document.createElement("canvas");
++      canvas.width = canvas.height = 1;
++      const ctx = canvas.getContext("2d");
++      if (!ctx) return "rgba(255, 0, 0,";
++      ctx.fillStyle = color;
++      ctx.fillRect(0, 0, 1, 1);
++      const [r, g, b] = Array.from(ctx.getImageData(0, 0, 1, 1).data);
++      return `rgba(${r}, ${g}, ${b},`;
++    };
++    return toRGBA(color);
++  }, [color]);
++
++  const setupCanvas = useCallback(
++    (canvas: HTMLCanvasElement, width: number, height: number) => {
++      const dpr = window.devicePixelRatio || 1;
++      canvas.width = width * dpr;
++      canvas.height = height * dpr;
++      canvas.style.width = `${width}px`;
++      canvas.style.height = `${height}px`;
++      const cols = Math.ceil(width / (squareSize + gridGap));
++      const rows = Math.ceil(height / (squareSize + gridGap));
++
++      const squares = new Float32Array(cols * rows);
++      for (let i = 0; i < squares.length; i++) {
++        squares[i] = Math.random() * maxOpacity;
++      }
++
++      return { cols, rows, squares, dpr };
++    },
++    [squareSize, gridGap, maxOpacity]
++  );
++
++  const updateSquares = useCallback(
++    (squares: Float32Array, deltaTime: number) => {
++      for (let i = 0; i < squares.length; i++) {
++        if (Math.random() < flickerChance * deltaTime) {
++          squares[i] = Math.random() * maxOpacity;
++        }
++      }
++    },
++    [flickerChance, maxOpacity]
++  );
++
++  const drawGrid = useCallback(
++    (
++      ctx: CanvasRenderingContext2D,
++      width: number,
++      height: number,
++      cols: number,
++      rows: number,
++      squares: Float32Array,
++      dpr: number
++    ) => {
++      ctx.clearRect(0, 0, width, height);
++      ctx.fillStyle = "transparent";
++      ctx.fillRect(0, 0, width, height);
++
++      for (let i = 0; i < cols; i++) {
++        for (let j = 0; j < rows; j++) {
++          const opacity = squares[i * rows + j];
++          ctx.fillStyle = `${memoizedColor}${opacity})`;
++          ctx.fillRect(
++            i * (squareSize + gridGap) * dpr,
++            j * (squareSize + gridGap) * dpr,
++            squareSize * dpr,
++            squareSize * dpr
++          );
++        }
++      }
++    },
++    [memoizedColor, squareSize, gridGap]
++  );
++
++  useEffect(() => {
++    const canvas = canvasRef.current;
++    const container = containerRef.current;
++    const ctx = canvas?.getContext("2d") ?? null;
++    let animationFrameId: number | null = null;
++    let resizeObserver: ResizeObserver | null = null;
++    let intersectionObserver: IntersectionObserver | null = null;
++    let gridParams: ReturnType<typeof setupCanvas> | null = null;
++
++    if (canvas && container && ctx) {
++      const updateCanvasSize = () => {
++        const newWidth = width || container.clientWidth;
++        const newHeight = height || container.clientHeight;
++        setCanvasSize({ width: newWidth, height: newHeight });
++        gridParams = setupCanvas(canvas, newWidth, newHeight);
++      };
++
++      updateCanvasSize();
++
++      let lastTime = 0;
++      const animate = (time: number) => {
++        if (!isInView || !gridParams) return;
++
++        const deltaTime = (time - lastTime) / 1000;
++        lastTime = time;
++
++        updateSquares(gridParams.squares, deltaTime);
++        drawGrid(
++          ctx,
++          canvas.width,
++          canvas.height,
++          gridParams.cols,
++          gridParams.rows,
++          gridParams.squares,
++          gridParams.dpr
++        );
++        animationFrameId = requestAnimationFrame(animate);
++      };
++
++      resizeObserver = new ResizeObserver(() => {
++        updateCanvasSize();
++      });
++      resizeObserver.observe(container);
++
++      intersectionObserver = new IntersectionObserver(
++        ([entry]) => {
++          setIsInView(entry.isIntersecting);
++        },
++        { threshold: 0 }
++      );
++      intersectionObserver.observe(canvas);
++
++      if (isInView) {
++        animationFrameId = requestAnimationFrame(animate);
++      }
++    }
++
++    return () => {
++      if (animationFrameId !== null) {
++        cancelAnimationFrame(animationFrameId);
++      }
++      if (resizeObserver) {
++        resizeObserver.disconnect();
++      }
++      if (intersectionObserver) {
++        intersectionObserver.disconnect();
++      }
++    };
++  }, [setupCanvas, updateSquares, drawGrid, width, height, isInView]);
++
++  return (
++    <div ref={containerRef} className={cn(`h-full w-full ${className}`)} {...props}>
++      <canvas
++        ref={canvasRef}
++        className="pointer-events-none"
++        style={{
++          width: canvasSize.width,
++          height: canvasSize.height,
++        }}
++      />
++    </div>
++  );
++};
+diff --git a/src/lib/utils.ts b/src/lib/utils.ts
+new file mode 100644
+index 0000000..a5ef193
+--- /dev/null
++++ b/src/lib/utils.ts
+@@ -0,0 +1,6 @@
++import { clsx, type ClassValue } from "clsx";
++import { twMerge } from "tailwind-merge";
++
++export function cn(...inputs: ClassValue[]) {
++  return twMerge(clsx(inputs));
++}
+diff --git a/src/pages/Startsida.tsx b/src/pages/Startsida.tsx
+index bbba3f2..2e077f8 100644
+--- a/src/pages/Startsida.tsx
++++ b/src/pages/Startsida.tsx
+@@ -1,5 +1,6 @@
+ import Footer from "../components/Footer";
+ import Header from "../components/Header";
++import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+ 
+ 
+ function HomePage() {
+@@ -9,7 +10,16 @@ function HomePage() {
+         <Header/>
+ 
+         <main>
+-            
++            <section className="relative h-[500px] w-full overflow-hidden">
++                <FlickeringGrid
++                    className="absolute inset-0 z-0 size-full"
++                    squareSize={4}
++                    gridGap={6}
++                    color="#6B7280"
++                    maxOpacity={0.5}
++                    flickerChance={0.1}
++                />
++            </section>
+         </main>
+ 
+ 
+diff --git a/tsconfig.app.json b/tsconfig.app.json
+index 3b9501e..36f3f0e 100644
+--- a/tsconfig.app.json
++++ b/tsconfig.app.json
+@@ -1,6 +1,9 @@
+ {
+   "compilerOptions": {
+     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
++    "paths": {
++      "@/*": ["./src/*"]
++    },
+     "target": "es2023",
+     "lib": ["ES2023", "DOM"],
+     "module": "esnext",
+diff --git a/vite.config.ts b/vite.config.ts
+index de0fde8..c7d3e14 100644
+--- a/vite.config.ts
++++ b/vite.config.ts
+@@ -1,7 +1,16 @@
++import path from "node:path";
++import { fileURLToPath } from "node:url";
+ import { defineConfig } from "vite";
+ import react from "@vitejs/plugin-react";
+ import tailwindcss from "@tailwindcss/vite";
+ 
++const __dirname = path.dirname(fileURLToPath(import.meta.url));
++
+ export default defineConfig({
+   plugins: [react(), tailwindcss()],
++  resolve: {
++    alias: {
++      "@": path.resolve(__dirname, "./src"),
++    },
++  },
+ });
+\ No newline at end of file
