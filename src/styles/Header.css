@@ -1,12 +1,7 @@
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin: 0;
-    padding: 0 2rem;
-
-    background-color: yellowgreen;
+    position: relative;
+    height: fit-content;
+    overflow: hidden;
 }
 
 header ul {
@@ -38,4 +33,9 @@ header ul {
 
 .navbar a:hover {
     transform: translateY(-5px);
+}
+
+.navbar {
+    position: relative;
+    z-index: 2;
 }
