@@ -16,19 +16,23 @@ function Header() {
       <div className="navbar">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="logo">Mattias<span>.</span>Waern</Link>
           </li>
 
           <li>
-            <Link to="/Projects">Projects</Link>
+            <Link to="/">Om mig</Link>
           </li>
 
           <li>
-            <Link to="/Contact">Contact</Link>
+            <Link to="/Projects">Kompetenser</Link>
           </li>
 
           <li>
-            <Link to="/About">About</Link>
+            <Link to="/Contact">Project</Link>
+          </li>
+
+          <li>
+            <Link to="/About">Kontakta mig</Link>
           </li>
 
         </ul>

@@ -1,0 +1,82 @@
+
+
+.terminal {
+  position: relative;
+
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 40px;
+  transition: border-color 0.3s;
+
+  max-width: 500px;
+  max-height: fit-content;
+}
+
+.terminal:hover {
+  border-color: var(--ink-dim);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--panel-border);
+}
+
+.terminal-body {
+  padding: 20px 24px 26px;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  min-height: 92px;
+}
+
+.terminal-body .line {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.terminal-body .prompt {
+  color: var(--amber-dim);
+  flex-shrink: 0;
+}
+
+.terminal-body .out {
+  color: var(--ink);
+}
+
+.terminal-body .resp {
+  color: var(--ink-faint);
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: var(--amber);
+  vertical-align: -2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}
