@@ -1,4 +1,21 @@
 @import "tailwindcss";
+  :root {
+    --bg: #12141a;
+    --panel: #191c24;
+    --panel-border: #2a2e3a;
+    --ink: #e6e6e2;
+    --ink-dim: #8b8d98;
+    --ink-faint: #565a68;
+    --amber: #e8a33d;
+    --amber-dim: #a67a34;
+    --amber-glow: rgba(232, 163, 61, 0.12);
+    --green: #7fb069;
+    --red: #d9705c;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', -apple-system, sans-serif;
+    --radius: 3px;
+  }
+
 
 *{
     box-sizing: border-box;

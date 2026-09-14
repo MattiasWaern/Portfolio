@@ -4,11 +4,11 @@ import type { TerminalCommand } from '../types';
 
 export const terminalCommands: TerminalCommand[] = [
   {
-    cmd: 'whoami --role frontend --seniority junior',
+    cmd: 'WhoAmI --role frontend --seniority junior',
     response: 'Mattias Waern · 2 år erfarenhet · Norrtälje',
   },
   {
-    cmd: 'cat status.txt',
+    cmd: 'npm run status.txt',
     response: 'Pluggar hårt och lär mig nya saker varje dag',
   },
   {
