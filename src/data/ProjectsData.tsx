@@ -6,7 +6,7 @@ const ProjectsData = [
         id: 1,
         name: "Project 1",
         description: "A simple project to demonstrate the concept.",
-        skills: ["JavaScript", "React", "CSS", "HTML", <FaGithub/>],
+        skills: ["JavaScript", "React", "CSS", "HTML", <FaGithub/>, <FaGithub/>, <FaGithub/>],
         image: "project1.png",
         link: ""
     },
