@@ -1,16 +1,21 @@
 
 
 .terminal {
+  position: relative;
+
   background: var(--panel);
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 40px;
   transition: border-color 0.3s;
+
+  max-width: 500px;
+  max-height: fit-content;
 }
 
 .terminal:hover {
-  border-color: var(--amber-dim);
+  border-color: var(--ink-dim);
 }
 
 .terminal-bar {

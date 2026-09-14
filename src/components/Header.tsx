@@ -16,6 +16,10 @@ function Header() {
       <div className="navbar">
         <ul>
           <li>
+            <Link to="/" className="logo">Mattias<span>.</span>Waern</Link>
+          </li>
+
+          <li>
             <Link to="/">Om mig</Link>
           </li>
 
