@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-
+import Projects from "../components/Projects";
 
 function HomePage() {
 
@@ -9,11 +9,10 @@ function HomePage() {
         <Header/>
 
         <main>
-            
+            <Projects/>
         </main>
 
-
-         <Footer/> 
+        <Footer/> 
     </>
   )
 }
