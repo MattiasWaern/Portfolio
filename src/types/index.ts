@@ -8,3 +8,9 @@ export interface Project {
     link: string;
     image: string;
 }
+
+
+export interface TerminalCommand{
+    cmd: string;
+    response: string;
+}

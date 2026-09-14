@@ -1,16 +1,7 @@
 import React from 'react';
-import type { ReactNode } from 'react';
 import projects from '../data/ProjectsData.tsx'
 import "../styles/Projects.css"; 
 
-interface Project {
-    id: number;
-    name: string;
-    description: string;
-    skills: ReactNode[];
-    link: string;
-    image: string;
-}
 
 function Projects(){
 
