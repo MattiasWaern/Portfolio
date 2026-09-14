@@ -1,9 +1,12 @@
+import { FaGithub } from "react-icons/fa";
+
+
 const ProjectsData = [
     {
         id: 1,
         name: "Project 1",
         description: "A simple project to demonstrate the concept.",
-        skills: ["JavaScript", "React", "CSS"],
+        skills: ["JavaScript", "React", "CSS", "HTML", <FaGithub/>],
         image: "project1.png",
         link: ""
     },
