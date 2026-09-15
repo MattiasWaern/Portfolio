@@ -7,7 +7,7 @@ function AboutMe() {
   const aboutMe = useScrollReveal<HTMLDivElement>();
 
   return (
-    <main>
+    <div className="AboutMeContainer">
       <section
         ref={intro.ref}
         className={`introduction reveal ${intro.visible ? 'is-visible' : ''}`}
@@ -26,8 +26,9 @@ function AboutMe() {
         ref={info.ref}
         className={`info reveal ${info.visible ? 'is-visible' : ''}`}
       >
-        <span>5 år</span> <p>- I programmering</p>
+        <span>2 år</span> <p>- I programmering</p>
         <span>Stockholm</span> <p>Hybrid - Distans</p>
+        <span>Tillgänglig</span> <p>- När som helst</p>
       </section>
 
       <section
@@ -37,7 +38,7 @@ function AboutMe() {
         <h1>Om Mig</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam quas voluptatibus optio modi, sed rem debitis nostrum ipsa, nesciunt mollitia inventore architecto similique repellat, officia labore enim quasi perspiciatis?</p>
       </section>
-    </main>
+    </div>
   );
 }
 
