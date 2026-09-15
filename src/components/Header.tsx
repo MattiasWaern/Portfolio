@@ -6,11 +6,11 @@ function Header() {
   return (
     <header>
       <FlickeringGrid
-        squareSize={4}
-        gridGap={6}
-        flickerChance={0.3}
+        squareSize={1}
+        gridGap={4}
+        flickerChance={0.2}
         color="255, 255, 255"
-        maxOpacity={.3}
+        maxOpacity={.2}
       />
 
       <div className="navbar">
