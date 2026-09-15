@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useTypewriter } from '@/hooks/useTypeWriter';
-import type { TerminalCommand } from '@/types';
+import { useTypewriter } from '../hooks/useTypeWriter';
+import type { TerminalCommand } from '../types';
 import "../styles/Terminal.css"; 
 
 interface Props {

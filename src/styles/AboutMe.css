@@ -1,0 +1,16 @@
+.introduction h1{
+    font-size: 3rem;
+}
+
+.introduction p{
+    color: var(--ink-dim);
+}
+
+
+.info span{
+    color: var(--ink);
+}
+
+.info p{
+    color: var(--ink-faint);
+}
