@@ -1,5 +1,16 @@
+.AboutMeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
 .introduction h1{
     font-size: 3rem;
+    font-family: var(--mono);
+    color: var(--ink);
 }
 
 .introduction p{
@@ -13,6 +24,16 @@
 
 .info p{
     color: var(--ink-faint);
+}
+
+.aboutMe h1{
+    color: var(--ink);
+    font-size: 2rem;
+}
+
+.aboutMe p{
+    color: var(--ink-dim);
+    font-size: 1rem;
 }
 
 .reveal {

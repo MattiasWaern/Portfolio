@@ -4,6 +4,7 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 function AboutMe() {
   const intro = useScrollReveal<HTMLDivElement>();
   const info = useScrollReveal<HTMLDivElement>();
+  const aboutMe = useScrollReveal<HTMLDivElement>();
 
   return (
     <main>
@@ -27,6 +28,14 @@ function AboutMe() {
       >
         <span>5 år</span> <p>- I programmering</p>
         <span>Stockholm</span> <p>Hybrid - Distans</p>
+      </section>
+
+      <section
+      ref={aboutMe.ref}
+      className={`aboutMe ${aboutMe.visible ? 'is-visible' : ''}`}
+      >
+        <h1>Om Mig</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam quas voluptatibus optio modi, sed rem debitis nostrum ipsa, nesciunt mollitia inventore architecto similique repellat, officia labore enim quasi perspiciatis?</p>
       </section>
     </main>
   );
