@@ -1,8 +1,9 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Projects from "../components/Projects";
+// import Projects from "../components/Projects";
 import { Terminal } from '../components/Terminal';
 import { terminalCommands } from '../data/TerminalCommands';
+import AboutMe from "../components/AboutMe";
 import "../styles/StartSida.css";
 
 function HomePage() {
@@ -13,7 +14,7 @@ function HomePage() {
 
         <main>
           <Terminal commands={terminalCommands} />
-            <Projects/>
+          <AboutMe/>
         </main>
 
         <Footer/> 
