@@ -1,11 +1,16 @@
-.AboutMeContainer{
+.AboutMeContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: left;
+    width: 100%;
 }
 
+.introduction,
+.info,
+.aboutMe {
+    width: 100%;
+    max-width: 1000px;
+}
 
 .introduction h1{
     font-size: 3rem;
@@ -20,7 +25,9 @@
 .info{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .info span{
@@ -28,7 +35,18 @@
 }
 
 .info p{
+    display: block;
     color: var(--ink-faint);
+}
+
+
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;   
 }
 
 .aboutMe h1{
@@ -36,9 +54,15 @@
     font-size: 2rem;
 }
 
-.aboutMe p{
+.aboutMe p {
     color: var(--ink-dim);
     font-size: 1rem;
+    line-height: 1.6;
+}
+
+.aboutMe h1,
+.aboutMe p {
+    display: block;
 }
 
 .reveal {

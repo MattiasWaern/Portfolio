@@ -33,7 +33,7 @@ function AboutMe() {
 
       <section
       ref={aboutMe.ref}
-      className={`aboutMe ${aboutMe.visible ? 'is-visible' : ''}`}
+      className={`aboutMe reveal ${aboutMe.visible ? 'is-visible' : ''}`}
       >
         <h1>Om Mig</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam quas voluptatibus optio modi, sed rem debitis nostrum ipsa, nesciunt mollitia inventore architecto similique repellat, officia labore enim quasi perspiciatis?</p>
