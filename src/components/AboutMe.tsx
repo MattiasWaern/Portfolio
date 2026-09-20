@@ -1,10 +1,28 @@
 import "../styles/AboutMe.css"
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { FaGithub, FaHtml5, FaReact, FaVuejs } from "react-icons/fa";
+import { IoLogoJavascript, IoLogoNodejs, IoLogoFirebase  } from "react-icons/io5";
+import { SiTypescript, SiTailwindcss  } from "react-icons/si";
+
+
+const technology = [
+  <FaGithub/>, 
+  <FaHtml5/>, 
+  <FaReact/>, 
+  <IoLogoJavascript/>, 
+  <FaVuejs/>, 
+  <IoLogoNodejs/>, 
+  <IoLogoFirebase/>, 
+  <SiTypescript/>, 
+  <SiTailwindcss/>
+]
+
 
 function AboutMe() {
   const intro = useScrollReveal<HTMLDivElement>();
   const info = useScrollReveal<HTMLDivElement>();
   const aboutMe = useScrollReveal<HTMLDivElement>();
+  const kompetens = useScrollReveal<HTMLDivElement>();
 
   return (
     <div className="AboutMeContainer">
@@ -38,6 +56,25 @@ function AboutMe() {
         <h1>Om Mig</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam quas voluptatibus optio modi, sed rem debitis nostrum ipsa, nesciunt mollitia inventore architecto similique repellat, officia labore enim quasi perspiciatis?</p>
       </section>
+
+       <section
+      ref={kompetens.ref}
+      className={`kompetenser reveal ${kompetens.visible ? 'is-visible' : ''}`}
+      >
+        <h1>Tech Stack</h1>
+        <div className="techStack"> 
+          <div className="techTrack"> 
+            {technology.map((icon, index) => ( 
+              <div className="techIcon" key={index}> {icon} 
+              </div> ))} 
+              {/* Duplicate för seamless loop */} 
+              {technology.map((icon, index) => ( 
+                <div className="techIcon" key={`duplicate-${index}`}> {icon} 
+                </div> ))} 
+                </div> 
+             </div>
+      </section>
+
     </div>
   );
 }
