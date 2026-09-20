@@ -62,9 +62,17 @@ function AboutMe() {
       className={`kompetenser reveal ${kompetens.visible ? 'is-visible' : ''}`}
       >
         <h1>Tech Stack</h1>
-        <div className="techStack">
-          {technology}
-        </div>
+        <div className="techStack"> 
+          <div className="techTrack"> 
+            {technology.map((icon, index) => ( 
+              <div className="techIcon" key={index}> {icon} 
+              </div> ))} 
+              {/* Duplicate för seamless loop */} 
+              {technology.map((icon, index) => ( 
+                <div className="techIcon" key={`duplicate-${index}`}> {icon} 
+                </div> ))} 
+                </div> 
+             </div>
       </section>
 
     </div>

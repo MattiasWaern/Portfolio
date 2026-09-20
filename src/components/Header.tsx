@@ -24,15 +24,11 @@ function Header() {
           </li>
 
           <li>
-            <Link to="/Projects">Kompetenser</Link>
+            <Link to="/Project">Project</Link>
           </li>
 
           <li>
-            <Link to="/Contact">Project</Link>
-          </li>
-
-          <li>
-            <Link to="/About">Kontakta mig</Link>
+            <Link to="/Contact">Kontakta mig</Link>
           </li>
 
         </ul>
