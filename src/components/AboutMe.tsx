@@ -1,8 +1,10 @@
 import "../styles/AboutMe.css"
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { FaGithub, FaHtml5, FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
 
 const technology = [
-  'HTML', 'CSS', 'JAVASCRIPT'
+  <FaGithub/>, <FaHtml5/>, <FaReact/>, <IoLogoJavascript/>
 ]
 
 
