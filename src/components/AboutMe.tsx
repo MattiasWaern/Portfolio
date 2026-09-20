@@ -1,10 +1,20 @@
 import "../styles/AboutMe.css"
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { FaGithub, FaHtml5, FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
+import { FaGithub, FaHtml5, FaReact, FaVuejs } from "react-icons/fa";
+import { IoLogoJavascript, IoLogoNodejs, IoLogoFirebase  } from "react-icons/io5";
+import { SiTypescript, SiTailwindcss  } from "react-icons/si";
+
 
 const technology = [
-  <FaGithub/>, <FaHtml5/>, <FaReact/>, <IoLogoJavascript/>
+  <FaGithub/>, 
+  <FaHtml5/>, 
+  <FaReact/>, 
+  <IoLogoJavascript/>, 
+  <FaVuejs/>, 
+  <IoLogoNodejs/>, 
+  <IoLogoFirebase/>, 
+  <SiTypescript/>, 
+  <SiTailwindcss/>
 ]
 
 
@@ -51,8 +61,10 @@ function AboutMe() {
       ref={kompetens.ref}
       className={`kompetenser reveal ${kompetens.visible ? 'is-visible' : ''}`}
       >
-        <h1>Kompetens</h1>
-        <p>{technology}</p>
+        <h1>Tech Stack</h1>
+        <div className="techStack">
+          {technology}
+        </div>
       </section>
 
     </div>
