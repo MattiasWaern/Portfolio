@@ -61,6 +61,28 @@
     line-height: 1.6;
 }
 
+.kompetenser{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;   
+    margin-top: 2rem;
+}
+
+.kompetenser h1{
+    color: var(--ink);
+    font-size: 2rem;
+}
+
+.kompetenser p {
+    color: var(--ink-dim);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
 .reveal {
   opacity: 0;
   transform: translateY(14px);
