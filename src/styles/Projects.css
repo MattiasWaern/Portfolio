@@ -1,3 +1,6 @@
-*{
-    color:  white;
+.project-card{
+    background-color: aliceblue;
+
+    gap: 20px;
+    padding: 20px;
 }
