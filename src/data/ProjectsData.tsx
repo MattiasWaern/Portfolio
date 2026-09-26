@@ -5,7 +5,7 @@ const ProjectsData: Project[] = [
   {
     id: 1,
     name: 'Milkshake Review',
-    description: 'A simple project to demonstrate the concept.',
+    description: 'Spara, betygsätta och jämföra milkshakes från olika ställen, se statistik över dina recensioner och visualisera alla platser på en interaktiv karta.',
     skills: ['JavaScript', 'React', 'CSS', 'HTML', 'Firebase', 'Mapbox', 'OpenStreetMap'],
     image: 'Milkshake.png',
     githubLink: 'https://github.com/MattiasWaern/Milkshake-Review',
