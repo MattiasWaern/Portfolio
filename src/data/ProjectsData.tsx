@@ -20,6 +20,24 @@ const ProjectsData: Project[] = [
     githubLink: '',
     link: ''
   },
+  {
+    id: 3,
+    name: 'GoRide',
+    description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
+    skills: ['Python', 'Django', 'PostgreSQL'],
+    image: 'test.jpg',
+    githubLink: '',
+    link: ''
+  },
+  {
+    id: 4,
+    name: 'The Selling Point',
+    description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
+    skills: ['Python', 'Django', 'PostgreSQL'],
+    image: 'test.jpg',
+    githubLink: '',
+    link: ''
+  },  
 ];
 
 export default ProjectsData;
