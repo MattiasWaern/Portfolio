@@ -1,6 +1,49 @@
-.project-card{
-    background-color: aliceblue;
+/* styles/Projects.css */
 
-    gap: 20px;
-    padding: 20px;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.skill-pill-icon {
+  display: inline-flex;
+  font-size: 0.9em;
+}
+
+.project-link-disabled {
+  color: #888;
+  font-size: 0.85rem;
 }
