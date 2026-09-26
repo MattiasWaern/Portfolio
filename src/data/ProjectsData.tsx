@@ -13,8 +13,8 @@ const ProjectsData: Project[] = [
   },
   {
     id: 2,
-    name: 'Project 2',
-    description: 'Another project to showcase different skills.',
+    name: 'MatteSida',
+    description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
     skills: ['Python', 'Django', 'PostgreSQL'],
     image: 'test.jpg',
     githubLink: '',
