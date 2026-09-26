@@ -1,5 +1,6 @@
 import { FaGithub, FaReact, FaPython, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiJavascript, SiDjango, SiPostgresql } from 'react-icons/si';
+import { SiJavascript, SiDjango, SiPostgresql, SiMapbox, SiOpenstreetmap, SiReactrouter, SiFirebase    } from 'react-icons/si';
+// import { IoLogoFirebase } from "react-icons/io5";
 import type { ReactNode } from 'react';
 
 const ICONS: Record<string, ReactNode> = {
@@ -11,6 +12,10 @@ const ICONS: Record<string, ReactNode> = {
   JavaScript: <SiJavascript />,
   Django: <SiDjango />,
   PostgreSQL: <SiPostgresql />,
+  Firebase: <SiFirebase/>,
+  Mapbox: <SiMapbox/>,
+  OpenStreetMap: <SiOpenstreetmap/>,
+  ReactRouter: <SiReactrouter/>
 };
 
 interface Props {
