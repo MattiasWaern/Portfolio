@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa";
-
+import type { Project } from '../types/index';
 
 const ProjectsData = [
     {
