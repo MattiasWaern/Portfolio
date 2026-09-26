@@ -1,7 +1,7 @@
 import ProjectsData from '../data/ProjectsData';
 import { SkillIcon } from './SkillIcon';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import '../../styles/Projects.css';
+import '../styles/Projects.css';
 
 function ProjectCard({ project }: { project: (typeof ProjectsData)[number] }) {
   const { ref, visible } = useScrollReveal<HTMLDivElement>();
@@ -27,13 +27,21 @@ function ProjectCard({ project }: { project: (typeof ProjectsData)[number] }) {
         ))}
       </div>
 
-      {project.link ? (
-        <a href={project.link} target="_blank" rel="noopener noreferrer">
-          View Project
+      {project.githubLink ? (
+        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+          View Github Repo
         </a>
       ) : (
         <span className="project-link-disabled">Kommer snart</span>
       )}
+
+      {project.link ? (
+        <a href={project.link} target="_blank" rel="noopener noreferrer">
+         Live Preview
+        </a>
+      ) : (
+        <span className="project-link-disabled">Kommer snart</span>
+      )}      
     </div>
   );
 }
