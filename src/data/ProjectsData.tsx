@@ -43,7 +43,7 @@ const ProjectsData: Project[] = [
     name: 'GoodReads kopia',
     description: 'Man kan skapa konto, recensera böcker, markera böcker som favorit, söka efter författare och boktitel, samt uppdatera hur långt man har läst en bok.',
     skills: ['React', 'Axios', 'SqlLite', 'TailWind', 'NodeJs', 'JWT', 'bcryptjs', 'ESLint'],
-    image: 'Marketplace.png',
+    image: 'Myreads.png',
     githubLink: 'https://github.com/MattiasWaern/Grupp-3-marketplace',
     link: ''
   },    
