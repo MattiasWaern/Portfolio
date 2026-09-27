@@ -6,7 +6,7 @@ const ProjectsData: Project[] = [
     id: 1,
     name: 'Milkshake Review',
     description: 'Spara, betygsätta och jämföra milkshakes från olika ställen, se statistik över dina recensioner och visualisera alla platser på en interaktiv karta.',
-    skills: ['JavaScript', 'React', 'CSS', 'HTML', 'Firebase', 'Mapbox', 'OpenStreetMap'],
+    skills: ['JavaScript', 'React', 'TailWind', 'HTML', 'Firebase', 'Mapbox', 'OpenStreetMap'],
     image: 'Milkshake.png',
     githubLink: 'https://github.com/MattiasWaern/Milkshake-Review',
     link: 'https://mattiaswaern.github.io/Milkshake-Review/'
@@ -24,7 +24,7 @@ const ProjectsData: Project[] = [
     id: 3,
     name: 'GoRide',
     description: 'Ett webbprojekt där man bokar bilar efter datum, Välj start och slut-datum, Få upp lediga bilar, Välj bil, Boka med mail',
-    skills: ['Python', 'Django', 'PostgreSQL'],
+    skills: ['React', 'TypeScript', 'RestAPI', 'CSS'],
     image: 'GoRide.png',
     githubLink: 'https://github.com/MattiasWaern/Grupp-3-TypeScript-Examinerande-gruppuppgift',
     link: ''
