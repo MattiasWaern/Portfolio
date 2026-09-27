@@ -1,5 +1,5 @@
 import { FaGithub, FaReact, FaPython, FaHtml5, FaCss3Alt, FaNodeJs  } from 'react-icons/fa';
-import { SiJavascript, SiDjango, SiPostgresql, SiMapbox, SiOpenstreetmap, SiReactrouter, SiEslint,  SiFirebase, SiTailwindcss, SiTypescript, SiAxios , SiStrapi, SiSqlite} from 'react-icons/si';
+import { SiJavascript, SiDjango, SiPostgresql, SiMapbox,  SiOpenstreetmap, SiReactrouter, SiEslint,  SiFirebase, SiTailwindcss, SiTypescript, SiAxios , SiStrapi, SiSqlite} from 'react-icons/si';
 // import { IoLogoFirebase } from "react-icons/io5";
 import type { ReactNode } from 'react';
 
