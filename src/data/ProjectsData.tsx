@@ -32,7 +32,7 @@ const ProjectsData: Project[] = [
   {
     id: 4,
     name: 'The Selling Point',
-    description: 'The Selling Point är en marketplace-applikation där användare kan Skapa konto/login Utforska annonser Köpa produkter Sälja produkter Kontakta säljare Lägga upp egna annonser Logga in som admin',
+    description: 'The Selling Point är en marketplace-applikation där användare kan Skapa konto/login Utforska annonser Köpa produkter Sälja produkter Kontakta säljare Lägga upp egna annonser Logga in som admin Projektet är utvecklat som ett skolprojekt inom kursen Javascript 3 på KYH.',
     skills: ['React', 'SqlLite', 'Strapi', 'CSS'],
     image: 'Marketplace.png',
     githubLink: 'https://github.com/MattiasWaern/Grupp-3-marketplace',
@@ -42,7 +42,7 @@ const ProjectsData: Project[] = [
     id: 5,
     name: 'GoodReads kopia',
     description: 'Man kan skapa konto, recensera böcker, markera böcker som favorit, söka efter författare och boktitel, samt uppdatera hur långt man har läst en bok.',
-    skills: ['Python', 'Django', 'PostgreSQL'],
+    skills: ['React', 'Axios', 'SqlLite', 'TailWind', 'NodeJs', 'JWT', 'bcryptjs', 'ESLint'],
     image: 'Marketplace.png',
     githubLink: 'https://github.com/MattiasWaern/Grupp-3-marketplace',
     link: ''
