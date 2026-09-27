@@ -17,7 +17,7 @@ const ProjectsData: Project[] = [
     description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
     skills: ['Python', 'Django', 'PostgreSQL'],
     image: 'MatteSida.png',
-    githubLink: '',
+    githubLink: 'https://github.com/MattiasWaern/MatteSida',
     link: ''
   },
   {
@@ -26,7 +26,7 @@ const ProjectsData: Project[] = [
     description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
     skills: ['Python', 'Django', 'PostgreSQL'],
     image: 'GoRide.png',
-    githubLink: '',
+    githubLink: 'https://github.com/MattiasWaern/Grupp-3-TypeScript-Examinerande-gruppuppgift',
     link: ''
   },
   {
@@ -35,7 +35,7 @@ const ProjectsData: Project[] = [
     description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
     skills: ['Python', 'Django', 'PostgreSQL'],
     image: 'Marketplace.png',
-    githubLink: '',
+    githubLink: 'https://github.com/MattiasWaern/Grupp-3-marketplace',
     link: ''
   },  
 ];
