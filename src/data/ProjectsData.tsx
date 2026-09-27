@@ -16,7 +16,7 @@ const ProjectsData: Project[] = [
     name: 'MatteSida',
     description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
     skills: ['Python', 'Django', 'PostgreSQL'],
-    image: 'test.jpg',
+    image: 'MatteSida.png',
     githubLink: '',
     link: ''
   },
@@ -25,7 +25,7 @@ const ProjectsData: Project[] = [
     name: 'GoRide',
     description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
     skills: ['Python', 'Django', 'PostgreSQL'],
-    image: 'test.jpg',
+    image: 'GoRide.png',
     githubLink: '',
     link: ''
   },
@@ -34,7 +34,7 @@ const ProjectsData: Project[] = [
     name: 'The Selling Point',
     description: 'Projektet låter användare skapa ett konto, lösa mattefrågor och följa sin utveckling över tid. Eftersom användardata sparas i en databas kan man logga in från olika enheter, exempelvis både dator och iPad.',
     skills: ['Python', 'Django', 'PostgreSQL'],
-    image: 'test.jpg',
+    image: 'Marketplace.png',
     githubLink: '',
     link: ''
   },  
