@@ -1,5 +1,5 @@
 import { FaGithub, FaReact, FaPython, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiJavascript, SiDjango, SiPostgresql, SiMapbox, SiOpenstreetmap, SiReactrouter, SiFirebase, SiTailwindcss, SiTypescript      } from 'react-icons/si';
+import { SiJavascript, SiDjango, SiPostgresql, SiMapbox, SiOpenstreetmap, SiReactrouter, SiFirebase, SiTailwindcss, SiTypescript, SiStrapi, SiSqlite} from 'react-icons/si';
 // import { IoLogoFirebase } from "react-icons/io5";
 import type { ReactNode } from 'react';
 
@@ -17,7 +17,9 @@ const ICONS: Record<string, ReactNode> = {
   OpenStreetMap: <SiOpenstreetmap/>,
   ReactRouter: <SiReactrouter/>,
   TailWind: <SiTailwindcss/>,
-  TypeScript: <SiTypescript/>
+  TypeScript: <SiTypescript/>,
+  Strapi: <SiStrapi/>,
+  SqlLite : <SiSqlite/>
 };
 
 interface Props {

@@ -33,7 +33,7 @@ const ProjectsData: Project[] = [
     id: 4,
     name: 'The Selling Point',
     description: 'The Selling Point är en marketplace-applikation där användare kan Skapa konto/login Utforska annonser Köpa produkter Sälja produkter Kontakta säljare Lägga upp egna annonser Logga in som admin',
-    skills: ['Python', 'Django', 'PostgreSQL'],
+    skills: ['React', 'SqlLite', 'Strapi', 'CSS'],
     image: 'Marketplace.png',
     githubLink: 'https://github.com/MattiasWaern/Grupp-3-marketplace',
     link: ''
