@@ -11,6 +11,7 @@ function ProjectCard({ project }: { project: (typeof ProjectsData)[number] }) {
       ref={ref}
       className={`project-card reveal ${visible ? 'is-visible' : ''}`}
     >
+      <h2>{project.name}</h2>
       <img
         src={project.image}
         alt={project.name}
@@ -18,7 +19,7 @@ function ProjectCard({ project }: { project: (typeof ProjectsData)[number] }) {
         decoding="async"
       />
 
-      <h2>{project.name}</h2>
+      
       <p>{project.description}</p>
 
       <div className="project-skills">

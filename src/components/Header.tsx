@@ -24,7 +24,7 @@ function Header() {
           </li>
 
           <li>
-            <Link to="/Project">Project</Link>
+            <Link to="/Project">Projekt</Link>
           </li>
 
           <li>
