@@ -37,7 +37,7 @@ function ProjectCard({ project }: { project: (typeof ProjectsData)[number] }) {
 
       {project.link ? (
         <a href={project.link} target="_blank" rel="noopener noreferrer">
-         Live Preview
+         <span className='livePreview'>Live Preview</span>
         </a>
       ) : (
         <span className="project-link-disabled">Kommer snart</span>

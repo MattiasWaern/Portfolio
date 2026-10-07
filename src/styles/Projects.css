@@ -84,7 +84,7 @@
 }
 
 .project-card a:hover {
-  color: var(--amber);
+  color: var(--ink);
   border-color: var(--amber-dim);
 }
 
@@ -93,6 +93,18 @@
   font-size: 0.82rem;
   color: var(--ink);
   align-self: flex-start;
+}
+
+.livePreview{
+  font-size: 1rem;
+  font-family: var(--mono);
+  color: var(--amber);
+}
+
+.livePreview:hover{
+  font-size: 1rem;
+  font-family: var(--mono);
+  color: var(--ink);
 }
 
 @media (prefers-reduced-motion: reduce) {
