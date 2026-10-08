@@ -5,9 +5,6 @@ export interface Layer {
 }
 export interface TechItem {
   name: string;
-  level: string;
-  usage: string;
-  example: string;
 }
 export interface TechGroup {
   category: string;

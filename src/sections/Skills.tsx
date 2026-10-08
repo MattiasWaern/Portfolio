@@ -6,7 +6,7 @@ export function Skills() {
   return (
     <section id="skills">
       <div className="wrap">
-        <SectionHeading title="Tools I build with" intro="Labels are honest self-assessments, not percentages. Hover or focus a card for how I use it." />
+        <SectionHeading title="Tools I build with" />
         {techGroups.map((g) => (
           <div key={g.category}>
             <div className="cat">{g.category}</div>

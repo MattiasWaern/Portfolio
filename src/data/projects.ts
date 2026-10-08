@@ -1,6 +1,8 @@
 import type { Project } from "../types";
 import MatteSida from "../assets/MatteSida.png";
 import Milkshake from "../assets/Milkshake.png";
+import MyReads from "../assets/MyReads.png";
+import GoRide from "../assets/GoRide.png";
 
 export const projects: Project[] = [
   {
@@ -41,9 +43,9 @@ export const projects: Project[] = [
     },
   },
   {
-    name: "Cinema / Filmvisarna",
+    name: "Filmvisarna",
     image: {
-      src: MatteSida,
+      src: "",
       alt: "MatteExperten på iPad med övningar i kategorin algebra",
       width: 1200,
       height: 750,
@@ -80,8 +82,8 @@ export const projects: Project[] = [
   {
     name: "Car Rental Application",
     image: {
-      src: MatteSida,
-      alt: "MatteExperten på iPad med övningar i kategorin algebra",
+      src: GoRide,
+      alt: "Bild på GoRides startsida",
       width: 1200,
       height: 750,
     },
@@ -125,13 +127,51 @@ export const projects: Project[] = [
     name: "Milkshake Reviewer",
     image: {
       src: Milkshake,
-      alt: "MatteExperten på iPad med övningar i kategorin algebra",
+      alt: "Bild på Milkshake Reviewers starsida",
       width: 1200,
       height: 750,
     },
     description:
       "A React app for reviewing milkshakes, built for learing React.",
-    technologies: ["React", "React Router", "REST API"],
+    technologies: ["React", "JavaScript", "TailWind", "Firebase", "Mapbox", "OpenStreetMap", "ReactRouter"],
+    problem:
+      "A booking app must stop users from reserving a car that is already taken.",
+    solution:
+      "Dynamic routes, a generic typed API layer, and date overlap validation on bookings.",
+    learned:
+      "A generic API helper removed a lot of duplicated fetch code and made types do real work.",
+    caseStudy: {
+      overview:
+        "A rental app for browsing cars and booking them for chosen dates.",
+      challenge:
+        "Handle booking state and prevent overlapping reservations while keeping components reusable.",
+      approach:
+        "Use React Router for dynamic car pages, one generic typed API layer, and shared components across lists and detail views.",
+      decisions: [
+        "Generic API handling typed per resource.",
+        "Dynamic routes for car detail and booking.",
+        "Date overlap validation before a booking is saved.",
+        "JSON Server as a stand-in REST backend.",
+      ],
+      difficulties: [
+        "Date overlap logic and its edge cases.",
+        "Keeping booking state consistent across routes.",
+      ],
+      learned:
+        "This project taught me to design the data flow first; the components followed naturally.",
+    },
+  },
+  {
+    name: "MyReads",
+    image: {
+      src: MyReads,
+      alt: "MyReads startsida",
+      width: 1200,
+      height: 750,
+    },
+    description:
+      "A React app for reviewing milkshakes, built for learing React.",
+    technologies: ["React", "JavaScript", "TailWind", "Firebase", "Mapbox", "OpenStreetMap", "ReactRouter"],
     problem:
       "A booking app must stop users from reserving a car that is already taken.",
     solution:

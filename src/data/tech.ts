@@ -7,12 +7,7 @@ const raw: Raw = [
     "Frontend",
     [
       ["React", "Comfortable", "Components, hooks, routing", "MatteExperten"],
-      [
-        "TypeScript",
-        "Working knowledge · learning",
-        "Typed props and API data",
-        "Car Rental",
-      ],
+      ["TypeScript", "Comfortable", "Logic and DOM behaviour", "All projects"],
       ["JavaScript", "Comfortable", "Logic and DOM behaviour", "All projects"],
       ["HTML", "Comfortable", "Semantic, accessible markup", "All projects"],
       ["CSS", "Comfortable", "Layouts, responsive design", "All projects"],
@@ -62,10 +57,7 @@ const raw: Raw = [
 
 export const techGroups: TechGroup[] = raw.map(([category, items]) => ({
   category,
-  items: items.map(([name, level, usage, example]) => ({
+  items: items.map(([name]) => ({
     name,
-    level,
-    usage,
-    example,
   })),
 }));
