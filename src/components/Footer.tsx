@@ -1,22 +1,13 @@
-import "../styles/Footer.css";
-import { FaGithub } from "react-icons/fa";
+import { SocialLinks } from './SocialLinks';
 
-function Footer () {
-    return(
-        <footer className="footer">
-            <h1>Footer</h1>
-
-        <li>
-            <a
-              href="https://github.com/MattiasWaern"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-        </li>
-        </footer>
-    )
+export function Footer() {
+  return (
+    <footer>
+      <div className="wrap">
+        <div><b style={{ color: 'var(--tx)' }}>Mattias Waern</b><br />Frontend Developer / Fullstack Developer</div>
+        <SocialLinks withEmail />
+        <div>© 2026 Mattias Waern</div>
+      </div>
+    </footer>
+  );
 }
-
-export default Footer;
