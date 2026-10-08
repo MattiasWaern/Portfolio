@@ -24,16 +24,10 @@ export function ProjectCard({
   return (
     <article className="proj" aria-labelledby={`project-${index}`}>
       <div className="ph">
-        <div className="pv" aria-hidden="true">
-          <i className="g" style={{ width: "40%" }} />
-          <i style={{ width: "70%" }} />
-          <div className="blk">
-            <i />
-            <i />
-            <i />
-          </div>
-          <i style={{ width: "55%" }} />
-          <i className="g" style={{ width: "25%" }} />
+        <div className="pv">
+          <img src={project.image.src} alt={project.image.alt}
+              width={project.image.width} height={project.image.height}
+              loading="lazy" decoding="async" />
         </div>
         <div className="pb">
           <h3 id={`project-${index}`}>{project.name}</h3>
