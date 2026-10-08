@@ -8,8 +8,8 @@ export const projects: Project[] = [
     image: {
       src: MatteSida,
       alt: "MatteExperten",
-      width: 18900,
-      height: 250,
+      width: 1200,
+      height: 750,
     },
     description:
       "A responsive React platform for practising Mathematics 2, built for desktop and iPad.",

@@ -949,16 +949,51 @@ footer .wrap {
 }
 
 
+.ph {
+    grid-template-columns: 1fr
+}
+
 .pv {
+    display: block;
     padding: 0;
-    overflow: hidden
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+    background: #0f0f0e
 }
 
 .pv img {
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    object-position: top;
     display: block;
+    width: 100%;
+    height: auto;
+    transition: transform .6s
 }
 
+.proj:hover .pv img {
+    transform: scale(1.02)
+}
+
+.pb {
+    padding: 2rem
+}
+
+.sp {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0
+}
+
+@media(max-width:800px) {
+    .pv {
+        min-height: 0
+    }
+
+    .sp {
+        grid-template-columns: 1fr
+    }
+
+    .pb {
+        padding: 1.5rem
+    }
+}
