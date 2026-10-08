@@ -1,8 +1,9 @@
 import type { Project } from "../types";
-import MatteSida from "../assets/MatteSida.png";
-import Milkshake from "../assets/Milkshake.png";
-import MyReads from "../assets/MyReads.png";
-import GoRide from "../assets/GoRide.png";
+const MatteSida = new URL("../assets/MatteSida.png", import.meta.url).href;
+const Milkshake = new URL("../assets/Milkshake.png", import.meta.url).href;
+const MyReads = new URL("../assets/Myreads.png", import.meta.url).href;
+const GoRide = new URL("../assets/GoRide.png", import.meta.url).href;
+const Filmvisarna = new URL("../assets/Filmvisarna.png", import.meta.url).href;
 
 export const projects: Project[] = [
   {
@@ -45,7 +46,7 @@ export const projects: Project[] = [
   {
     name: "Filmvisarna",
     image: {
-      src: "",
+      src: Filmvisarna,
       alt: "MatteExperten på iPad med övningar i kategorin algebra",
       width: 1200,
       height: 750,
