@@ -1,15 +1,34 @@
-export interface Project {
-    id: number;
-    name: string;
-    description: string;
-    skills: string[];
-    githubLink: string;
-    link: string;
-    image: string;
+export interface Layer {
+  name: string;
+  subtitle: string;
+  description: string;
 }
-
-
-export interface TerminalCommand{
-    cmd: string;
-    response: string;
+export interface TechItem {
+  name: string;
+}
+export interface TechGroup {
+  category: string;
+  items: TechItem[];
+}
+export interface TextItem {
+  title: string;
+  text: string;
+}
+export interface CaseStudy {
+  overview: string;
+  challenge: string;
+  approach: string;
+  decisions: string[];
+  difficulties: string[];
+  learned: string;
+}
+export interface Project {
+  name: string;
+  description: string;
+  technologies: string[];
+  problem: string;
+  solution: string;
+  learned: string;
+  caseStudy: CaseStudy;
+  image: { src: string; alt: string; width: number; height: number };
 }
