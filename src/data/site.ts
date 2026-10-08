@@ -1,10 +1,9 @@
 import type { TextItem } from '../types';
 
-/** Replace these placeholders with real links. */
-export const EMAIL = 'your-email@example.com';
+export const EMAIL = 'waernmattias@gmail.com';
 export const LINKS = {
-  github: 'https://github.com/',
-  linkedin: 'https://www.linkedin.com/',
+  github: 'https://github.com/MattiasWaern',
+  linkedin: 'https://www.linkedin.com/in/mattias-waern-5905a226a/',
   email: `mailto:${EMAIL}`,
 } as const;
 
