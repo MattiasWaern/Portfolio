@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
-import { EMAIL } from '../data/site';
 import { Button } from './Button';
 
 type Field = 'name' | 'email' | 'message';
