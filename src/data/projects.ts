@@ -18,6 +18,7 @@ export const projects: Project[] = [
     description:
       "A responsive React platform for practising Mathematics 2, built for desktop and iPad.",
     technologies: ["React", "JavaScript", "CSS", "Vite"],
+    githubUrl: "https://github.com/MattiasWaern/MatteSida",
   },
 
   {
@@ -31,6 +32,7 @@ export const projects: Project[] = [
     description:
       "A modern cinema web app for browsing films and exploring a booking flow, with a strong database foundation.",
     technologies: ["React", "TypeScript", "SQL", "REST API"],
+    githubUrl: "https://github.com/MattiasWaern/GruppC-Frontend-projekt",
   },
 {
     name: "Portfolio",
@@ -49,7 +51,7 @@ export const projects: Project[] = [
       "REST API",
       "JSON Server",
     ],
-    
+    githubUrl: "https://github.com/MattiasWaern/Portfolio",
   },  
   {
     name: "Car Rental Application",
@@ -68,6 +70,7 @@ export const projects: Project[] = [
       "REST API",
       "JSON Server",
     ],
+    githubUrl: "https://github.com/MattiasWaern/Grupp-3-TypeScript-Examinerande-gruppuppgift",
   },
 
   {
@@ -81,6 +84,7 @@ export const projects: Project[] = [
     description:
       "A React app for reviewing milkshakes, built for learing React.",
     technologies: ["React", "JavaScript", "TailWind", "Firebase", "Mapbox", "OpenStreetMap", "ReactRouter"],
+    githubUrl: "https://github.com/MattiasWaern/Milkshake-Review",
   },
   {
     name: "MyReads",
@@ -93,5 +97,6 @@ export const projects: Project[] = [
     description:
       "A React app for reviewing milkshakes, built for learing React.",
     technologies: ["React", "JavaScript", "TailWind", "Firebase", "Mapbox", "OpenStreetMap", "ReactRouter"],
+    githubUrl: "https://github.com/MattiasWaern/fullstack",
   },
 ];

@@ -1,5 +1,4 @@
 import type { Project } from "../types";
-import { LINKS } from "../data/site";
 import { Button } from "./Button";
 
 
@@ -32,7 +31,7 @@ export function ProjectCard({
           <div className="sp">
           </div>
           <div className="pa">
-            <Button href={LINKS.github} external>
+            <Button href={project.githubUrl} external>
               GitHub
             </Button>
           </div>

@@ -20,4 +20,5 @@ export interface Project {
   description: string;
   technologies: string[];
   image: { src: string; alt: string; width: number; height: number };
+  githubUrl: string;
 }
