@@ -52,65 +52,67 @@ export function ContactForm() {
     return error === null;
   };
 
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
 
-    if (isSending) return;
+  if (isSending) return;
 
-    const invalidFields = fields.filter(
-      ({ name }) => !rules[name](values[name])
+  const nextErrors: Partial<Record<Field, string>> = {};
+
+  fields.forEach(({ name }) => {
+    const error = rules[name](values[name]);
+    if (error) nextErrors[name] = error;
+  });
+
+  setErrors(nextErrors);
+
+  if (Object.keys(nextErrors).length > 0) {
+    setStatus('Please fix the highlighted fields.');
+
+    const firstInvalidField = fields.find(
+      ({ name }) => nextErrors[name]
     );
 
-    const nextErrors: Partial<Record<Field, string>> = {};
-
-    fields.forEach(({ name }) => {
-      nextErrors[name] = rules[name](values[name]) ?? undefined;
-    });
-
-    setErrors(nextErrors);
-
-    if (invalidFields.length > 0) {
-      setStatus('Please fix the highlighted fields.');
-
+    if (firstInvalidField) {
       event.currentTarget
         .querySelector<HTMLElement>(
-          `[name="${invalidFields[0].name}"]`
+          `[name="${firstInvalidField.name}"]`
         )
         ?.focus();
-
-      return;
     }
 
-    setIsSending(true);
-    setStatus('Sending your message...');
+    return;
+  }
 
-    try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          name: values.name.trim(),
-          email: values.email.trim(),
-          message: values.message.trim(),
-          to_email: EMAIL,
-        },
-        {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        }
-      );
+  setIsSending(true);
+  setStatus('Sending your message...');
 
-      setValues(initialValues);
-      setErrors({});
-      setStatus('Message sent successfully! Thank you for reaching out.');
-    } catch (error) {
-      console.error('EmailJS error:', error);
-      setStatus(
-        'Unable to send your message. Please try again or email me directly.'
-      );
-    } finally {
-      setIsSending(false);
-    }
-  };
+  try {
+    await emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        name: values.name.trim(),
+        email: values.email.trim(),
+        message: values.message.trim(),
+      },
+      {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      }
+    );
+
+    setValues(initialValues);
+    setErrors({});
+    setStatus('Message sent successfully! Thank you for reaching out.');
+  } catch (error) {
+    console.error('EmailJS error:', error);
+    setStatus(
+      'Unable to send your message. Please try again or email me directly.'
+    );
+  } finally {
+    setIsSending(false);
+  }
+};
 
   return (
     <form onSubmit={onSubmit} noValidate>
