@@ -8,7 +8,7 @@ export function Projects() {
       <div className="wrap">
         <SectionHeading
           title="Things I've built"
-          intro="Each project opens into a short case study, including what was hard and what I'd do differently."
+          intro="Each project was either developed solo or as part of a group project in school"
         />
         {projects.map((p, i) => (
           <ProjectCard key={p.name} project={p} index={i} />

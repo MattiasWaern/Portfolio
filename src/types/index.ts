@@ -14,21 +14,11 @@ export interface TextItem {
   title: string;
   text: string;
 }
-export interface CaseStudy {
-  overview: string;
-  challenge: string;
-  approach: string;
-  decisions: string[];
-  difficulties: string[];
-  learned: string;
-}
+
 export interface Project {
   name: string;
   description: string;
   technologies: string[];
-  problem: string;
-  solution: string;
-  learned: string;
-  caseStudy: CaseStudy;
   image: { src: string; alt: string; width: number; height: number };
+  githubUrl: string;
 }
