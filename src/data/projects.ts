@@ -25,7 +25,7 @@ export const projects: Project[] = [
     name: "Filmvisarna",
     image: {
       src: Filmvisarna,
-      alt: "MatteExperten på iPad med övningar i kategorin algebra",
+      alt: "The project doesn't have frontend yet that's why there's no picture...",
       width: 1200,
       height: 750,
     },
