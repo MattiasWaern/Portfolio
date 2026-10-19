@@ -891,7 +891,8 @@ textarea {
     border-radius: 6px;
     padding: .75rem;
     color: var(--tx);
-    font: inherit
+    font: inherit;
+    resize: none;
 }
 
 input:hover,
