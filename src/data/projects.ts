@@ -43,13 +43,12 @@ export const projects: Project[] = [
       height: 750,
     },
     description:
-      "A React + TypeScript app for browsing and booking rental cars, built around application architecture.",
+      "A React + TypeScript app for showing my Portfolio.",
     technologies: [
       "React",
       "TypeScript",
       "React Router",
-      "REST API",
-      "JSON Server",
+      "EMAILJS"
     ],
     githubUrl: "https://github.com/MattiasWaern/Portfolio",
   },  
