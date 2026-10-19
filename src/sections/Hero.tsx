@@ -3,7 +3,7 @@ import { Button } from '../components/Button';
 import { SocialLinks } from '../components/SocialLinks';
 import { SystemDiagram } from '../components/SystemDiagram';
 
-const headline = ['I always look to further to learn more.'];
+const headline = ['I always look further to learn more.'];
 
 export function Hero() {
   return (
