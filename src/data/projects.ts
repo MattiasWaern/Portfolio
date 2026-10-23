@@ -94,8 +94,8 @@ export const projects: Project[] = [
       height: 750,
     },
     description:
-      "A React app for reviewing milkshakes, built for learing React.",
-    technologies: ["React", "JavaScript", "TailWind", "Firebase", "Mapbox", "OpenStreetMap", "ReactRouter"],
+      "A React app for trying to learn SQL",
+    technologies: ["React", "JavaScript", "TailWind", "SQLite", "ReactRouter", "BCRYPT", "JTW"],
     githubUrl: "https://github.com/MattiasWaern/fullstack",
   },
 ];
