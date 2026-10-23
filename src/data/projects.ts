@@ -95,7 +95,7 @@ export const projects: Project[] = [
     },
     description:
       "A React app for trying to learn SQL",
-    technologies: ["React", "JavaScript", "TailWind", "SQLite", "ReactRouter", "BCRYPT", "JTW"],
+    technologies: ["React", "JavaScript", "TailWind", "SQLite", "ReactRouter", "BCRYPT", "JTW", "AXIOS", "Express", "dotenv"],
     githubUrl: "https://github.com/MattiasWaern/fullstack",
   },
 ];
