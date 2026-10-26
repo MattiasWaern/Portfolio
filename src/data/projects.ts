@@ -31,10 +31,10 @@ export const projects: Project[] = [
       height: 750,
     },
     description:
-      "A modern cinema web app for browsing films and exploring a booking flow, with a strong database foundation.",
+      "A modern cinema web app for browsing films and exploring a booking flow, with a strong database foundation. Live preview is coming soon!",
     technologies: ["React", "TypeScript", "SQL", "REST API"],
     githubUrl: "https://github.com/MattiasWaern/GruppC-Frontend-projekt",
-    livePreview: "https://github.com/MattiasWaern/MatteSida"
+    livePreview: ""
   },
 {
     name: "Portfolio",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
       "EMAILJS"
     ],
     githubUrl: "https://github.com/MattiasWaern/Portfolio",
-    livePreview: "https://github.com/MattiasWaern/MatteSida"
+    livePreview: "https://portfolio-regge.vercel.app/"
   },  
   {
     name: "Car Rental Application",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "JSON Server",
     ],
     githubUrl: "https://github.com/MattiasWaern/Grupp-3-TypeScript-Examinerande-gruppuppgift",
-    livePreview: "https://github.com/MattiasWaern/MatteSida"
+    livePreview: ""
   },
 
   {
@@ -88,7 +88,7 @@ export const projects: Project[] = [
       "A React app for reviewing milkshakes, built for learing React.",
     technologies: ["React", "JavaScript", "TailWind", "Firebase", "Mapbox", "OpenStreetMap", "ReactRouter"],
     githubUrl: "https://github.com/MattiasWaern/Milkshake-Review",
-    livePreview: "https://github.com/MattiasWaern/MatteSida"
+    livePreview: "https://mattiaswaern.github.io/Milkshake-Review/"
   },
   {
     name: "MyReads",
@@ -102,6 +102,6 @@ export const projects: Project[] = [
       "A React app for trying to learn SQL",
     technologies: ["React", "JavaScript", "TailWind", "SQLite", "ReactRouter", "BCRYPT", "JTW", "AXIOS", "Express", "dotenv"],
     githubUrl: "https://github.com/MattiasWaern/fullstack",
-    livePreview: "https://github.com/MattiasWaern/MatteSida"
+    livePreview: ""
   },
 ];
