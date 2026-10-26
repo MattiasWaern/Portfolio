@@ -34,6 +34,9 @@ export function ProjectCard({
             <Button href={project.githubUrl} external>
               GitHub
             </Button>
+            <Button href={project.livePreview} external>
+              Live preview
+            </Button>            
           </div>
         </div>
       </div>

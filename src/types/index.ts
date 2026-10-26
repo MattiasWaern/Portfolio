@@ -21,4 +21,5 @@ export interface Project {
   technologies: string[];
   image: { src: string; alt: string; width: number; height: number };
   githubUrl: string;
+  livePreview: string;
 }
