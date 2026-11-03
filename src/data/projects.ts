@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "A modern cinema web app for browsing films and exploring a booking flow, with a strong database foundation. Live preview is coming soon!",
     technologies: ["React", "TypeScript", "SQL", "REST API"],
     githubUrl: "https://github.com/MattiasWaern/GruppC-Frontend-projekt",
-    livePreview: ""
+    livePreview: "https://github.com/MattiasWaern/GruppC-Frontend-projekt"
   },
 {
     name: "Portfolio",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "JSON Server",
     ],
     githubUrl: "https://github.com/MattiasWaern/Grupp-3-TypeScript-Examinerande-gruppuppgift",
-    livePreview: ""
+    livePreview: "https://github.com/MattiasWaern/Grupp-3-TypeScript-Examinerande-gruppuppgift"
   },
 
   {
