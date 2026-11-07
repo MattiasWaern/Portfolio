@@ -2,7 +2,6 @@ import type { Project } from "../types";
 const MatteSida = new URL("../assets/MatteSida.png", import.meta.url).href;
 const Milkshake = new URL("../assets/Milkshake.png", import.meta.url).href;
 const MyReads = new URL("../assets/Myreads.png", import.meta.url).href;
-const GoRide = new URL("../assets/GoRide.png", import.meta.url).href;
 const Filmvisarna = new URL("../assets/Filmvisarna.png", import.meta.url).href;
 const Portfolio = new URL("../assets/Portfolio.png", import.meta.url).href;
 
@@ -55,27 +54,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/MattiasWaern/Portfolio",
     livePreview: "https://portfolio-regge.vercel.app/"
   },  
-  {
-    name: "Car Rental Application",
-    image: {
-      src: GoRide,
-      alt: "Bild på GoRides startsida",
-      width: 1200,
-      height: 750,
-    },
-    description:
-      "A React + TypeScript app for browsing and booking rental cars, built around application architecture.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "React Router",
-      "REST API",
-      "JSON Server",
-    ],
-    githubUrl: "https://github.com/MattiasWaern/Grupp-3-TypeScript-Examinerande-gruppuppgift",
-    livePreview: ""
-  },
-
   {
     name: "Milkshake Reviewer",
     image: {
