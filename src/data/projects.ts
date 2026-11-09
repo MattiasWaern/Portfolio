@@ -80,6 +80,6 @@ export const projects: Project[] = [
       "A React app for trying to learn SQL",
     technologies: ["React", "JavaScript", "TailWind", "SQLite", "ReactRouter", "BCRYPT", "JTW", "AXIOS", "Express", "dotenv"],
     githubUrl: "https://github.com/MattiasWaern/fullstack",
-    livePreview: ""
+    livePreview: "https://myreads-sverige.vercel.app/"
   },
 ];
